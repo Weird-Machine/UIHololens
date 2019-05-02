@@ -26,6 +26,26 @@ namespace FancyScrollView.Example03
         {
             message.text = itemData.Message;
             messageLarge.text = Index.ToString();
+            switch (Index)
+            {
+                case 0:
+                    {
+                        messageLarge.text = "ciao";
+                        break;
+                    }
+                    
+                case 1:
+                    {
+                        messageLarge.text = "ciaooooooooo";
+                        break;
+                    }
+                case 2:
+                    {
+                        messageLarge.text = "peppe";
+                        break;
+                    }
+
+            }
 
             var selected = Context.SelectedIndex == Index;
             imageLarge.color = image.color = selected
@@ -40,8 +60,6 @@ namespace FancyScrollView.Example03
             animator.speed = 0;
         }
 
-        // GameObject が非アクティブになると Animator がリセットされてしまうため
-        // 現在位置を保持しておいて OnEnable のタイミングで現在位置を再設定します
         float currentPosition = 0;
 
         void OnEnable() => UpdatePosition(currentPosition);

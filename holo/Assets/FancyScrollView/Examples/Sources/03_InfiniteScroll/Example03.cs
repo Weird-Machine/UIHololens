@@ -10,8 +10,8 @@ namespace FancyScrollView.Example03
 
         void Start()
         {
-            var items = Enumerable.Range(0, 20)
-                .Select(i => new ItemData {Message = $"Cell {i}"})
+            var items = Enumerable.Range(0, 6)
+                .Select(i => new ItemData {Message = $"istruzione {i}"})
                 .ToArray();
 
             scrollView.UpdateData(items);
