@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tip
+  - Titolo1
+  - DescMax1
+  - DescMin1
+  - Bool1
   layers:
   - Default
   - TransparentFX

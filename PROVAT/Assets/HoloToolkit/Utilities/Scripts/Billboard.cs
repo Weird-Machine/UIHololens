@@ -1,13 +1,10 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License. See LICENSE in the project root for license information.
-
+﻿
 using UnityEngine;
 
 namespace HoloToolkit.Unity
 {
     public enum PivotAxis
     {
-        // Most common options, preserving current functionality with the same enum order.
         XY,
         Y,
         // Rotate about an individual axis.
@@ -20,14 +17,8 @@ namespace HoloToolkit.Unity
         Free
     }
 
-    /// <summary>
-    /// The Billboard class implements the behaviors needed to keep a GameObject oriented towards the user.
-    /// </summary>
     public class Billboard : MonoBehaviour
     {
-        /// <summary>
-        /// The axis about which the object will rotate.
-        /// </summary>
         [Tooltip("Specifies the axis about which the object will rotate.")]
         [SerializeField]
         private PivotAxis pivotAxis = PivotAxis.XY;
@@ -37,9 +28,7 @@ namespace HoloToolkit.Unity
             set { pivotAxis = value; }
         }
 
-        /// <summary>
-        /// The target we will orient to. If no target is specified, the main camera will be used.
-        /// </summary>
+
         [Tooltip("Specifies the target we will orient to. If no target is specified, the main camera will be used.")]
         [SerializeField]
         private Transform targetTransform;
@@ -60,9 +49,7 @@ namespace HoloToolkit.Unity
             }
         }
 
-        /// <summary>
-        /// Keeps the object facing the camera.
-        /// </summary>
+
         private void LateUpdate()
         {
             if (TargetTransform == null)
@@ -77,12 +64,11 @@ namespace HoloToolkit.Unity
                 }
             }
 
-            // Get a Vector that points from the target to the main camera.
+
             Vector3 directionToTarget = TargetTransform.position - transform.position;
 
             bool useCameraAsUpVector = true;
 
-            // Adjust for the pivot axis.
             switch (PivotAxis)
             {
                 case PivotAxis.X:
@@ -114,11 +100,10 @@ namespace HoloToolkit.Unity
 
                 case PivotAxis.Free:
                 default:
-                    // No changes needed.
                     break;
             }
 
-            // If we are right next to the camera the rotation is undefined. 
+
             if (directionToTarget.sqrMagnitude < 0.001f)
             {
                 return;
