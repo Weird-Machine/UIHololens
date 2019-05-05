@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/HoloToolkit-Examples/Input/Scenes/MotionControllerTest.unity
+  isLoaded: 1
+  isActive: 1

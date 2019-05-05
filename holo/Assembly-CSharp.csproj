@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\click.cs" />
      <Compile Include="Assets\FancyScrollView\Examples\Sources\01_Basic\Cell.cs" />
      <Compile Include="Assets\FancyScrollView\Examples\Sources\01_Basic\Example01.cs" />
      <Compile Include="Assets\FancyScrollView\Examples\Sources\01_Basic\ItemData.cs" />
