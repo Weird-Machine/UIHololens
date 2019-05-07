@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class click : MonoBehaviour
+
+public class click : MonoBehaviour, IInputClickHandler
 {
     // Start is called before the first frame update
     GameObject testo;
     TextMesh textMesh;
     InputManager inputManager;
     TextMesh  testoDaCambiare;
+    [SerializeField] string stringa = "testomodificato";
+
     void Start()
     {
-        testo = GameObject.Find("Bool1");
+        testo = GameObject.FindWithTag("Bool1");
         testoDaCambiare = testo.GetComponent<TextMesh>();
 
     }
@@ -29,7 +32,7 @@ public class click : MonoBehaviour
     public void UpdateText()
     {
         
-        testoDaCambiare.text= "Success";
+        testoDaCambiare.text= stringa;
 
         Debug.Log("Success");
     }
