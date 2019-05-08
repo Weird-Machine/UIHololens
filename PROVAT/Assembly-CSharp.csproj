@@ -757,7 +757,6 @@
      <Compile Include="Assets\HoloToolkit-Examples\UX\Scripts\Widgets\ScaleThemeWidget.cs" />
      <Compile Include="Assets\HoloToolkit-Examples\UX\Scripts\Widgets\TextMeshColorThemeWidget.cs" />
      <Compile Include="Assets\HoloToolkit-Examples\UX\Scripts\Widgets\TextureThemeWidget.cs" />
-     <Compile Include="Assets\Rotator.cs" />
      <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
      <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitConfigurable.shader" />
      <None Include="Assets\HoloToolkit\UX\Shaders\HUXButtonShader.shader" />
