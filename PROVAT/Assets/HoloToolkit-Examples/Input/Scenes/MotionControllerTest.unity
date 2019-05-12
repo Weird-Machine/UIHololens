@@ -141,10 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4289815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf9cced3aa5e634f99e623c40a05984, type: 3}
+  m_Script: {fileID: 11500000, guid: 15d9d91d120aa42429a9768266d6cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringa: testomodificato
+  Pannello: {fileID: 0}
 --- !u!65 &4289817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376,12 +376,6 @@ Transform:
   m_Father: {fileID: 1277508892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &238119211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2981179363512947353, guid: 7a9483250a11df14fa37c308ed3ce054,
-    type: 3}
-  m_PrefabInstance: {fileID: 1288209628}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330135162
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,9 +678,16 @@ Transform:
   m_Children:
   - {fileID: 4289820}
   - {fileID: 2098275935}
-  m_Father: {fileID: 238119211}
-  m_RootOrder: 2
+  - {fileID: 688083089}
+  m_Father: {fileID: 535787536}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &535787536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2981179363512947355, guid: 7a9483250a11df14fa37c308ed3ce054,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288209628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &575477954
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +790,8 @@ GameObject:
   - component: {fileID: 613472660}
   - component: {fileID: 613472661}
   - component: {fileID: 613472662}
+  - component: {fileID: 613472663}
+  - component: {fileID: 613472664}
   m_Layer: 0
   m_Name: SceneContent
   m_TagString: Untagged
@@ -835,7 +838,7 @@ BillboardRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613472659}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -866,6 +869,38 @@ BillboardRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Billboard: {fileID: 0}
+--- !u!114 &613472663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613472659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4cf82b585f20243a4b5c9752c7f42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotx: -0.5
+  roty: 130
+  rotz: 0
+--- !u!1818360608 &613472664
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613472659}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0.90173805, y: -0.037, z: 5.1912637}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources: []
 --- !u!1 &688083088
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,12 +928,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688083088}
-  m_LocalRotation: {x: -0, y: -0.17185491, z: 3.49246e-10, w: 0.9851223}
-  m_LocalPosition: {x: 1.8717585, y: -0.3547067, z: 6.1890955}
-  m_LocalScale: {x: 0.04682411, y: 0.0509062, z: 0.055809196}
+  m_LocalRotation: {x: -3.4924597e-10, y: -0.17185494, z: 3.4924597e-10, w: 0.9851223}
+  m_LocalPosition: {x: -0.21712714, y: -0.086942896, z: 0.1451054}
+  m_LocalScale: {x: 0.046824116, y: 0.0509062, z: 0.055809207}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 447611091}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.002, y: 89.686005, z: 0.39200002}
 --- !u!114 &688083090
 MonoBehaviour:
@@ -2896,10 +2931,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2098275930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf9cced3aa5e634f99e623c40a05984, type: 3}
+  m_Script: {fileID: 11500000, guid: 0456990ded37fd24195531b05e8062e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringa: testomodificato
+  Pannello: {fileID: 0}
 --- !u!65 &2098275932
 BoxCollider:
   m_ObjectHideFlags: 0
