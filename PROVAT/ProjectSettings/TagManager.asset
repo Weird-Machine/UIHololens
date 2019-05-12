@@ -9,6 +9,18 @@ TagManager:
   - DescMax1
   - DescMin1
   - Bool1
+  - Titolo2
+  - Titolo3
+  - Titolo4
+  - DescMax2
+  - DescMax3
+  - DescMax4
+  - Bool2
+  - Bool3
+  - Bool4
+  - DescMin2
+  - DescMin3
+  - DescMin4
   layers:
   - Default
   - TransparentFX
